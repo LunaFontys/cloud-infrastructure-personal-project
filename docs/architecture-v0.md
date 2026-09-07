@@ -90,15 +90,15 @@ flowchart TD
 
 flowchart LR
 
-&#x20;   USER\[User / Browser]
+&#x20;   USER
 
-&#x20;   NET\[EduCloud Network<br/>Firewall / Security Rules]
+&#x20;   NET
 
-&#x20;   VM\[Ubuntu VM]
+&#x20;   VM
 
-&#x20;   RP\[Reverse Proxy<br/>planned]
+&#x20;   RP
 
-&#x20;   APP\[Application Container]
+&#x20;   APP
 
 
 
