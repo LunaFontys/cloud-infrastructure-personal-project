@@ -34,49 +34,27 @@ research, build, and test the infrastructure.
 
 flowchart TD
 
-&#x20;   DEV\["Developer PC"]
+&#x20;   DEV\["Developer PC"] -->|git push| GIT\["GitHub Repository"]
 
-&#x20;   GIT\["GitHub Repository"]
+&#x20;   GIT -->|trigger| CI\["GitHub Actions CI Pipeline"]
 
-&#x20;   CI\["GitHub Actions CI Pipeline"]
+&#x20;   CI -->|test + build| REG\["Container Registry - planned"]
 
-&#x20;   REG\["Container Registry - planned"]
-
-&#x20;   VM\["EduCloud Ubuntu VM"]
-
-&#x20;   DOCKER\["Docker Engine"]
-
-&#x20;   APP\["Node.js / Express Application - Docker Container"]
-
-&#x20;   DATA\["Persistent SQLite Data"]
-
-&#x20;   LOGS\["Application / System Logs"]
-
-&#x20;   MON\["Monitoring - planned"]
+&#x20;   REG -->|container image| DOCKER\["Docker Engine"]
 
 
 
-&#x20;   DEV -->|git push| GIT
+&#x20;   VM\["EduCloud Ubuntu VM"] --> DOCKER
 
-&#x20;   GIT -->|trigger| CI
+&#x20;   DOCKER --> APP\["Node.js / Express Application - Docker Container"]
 
-&#x20;   CI -->|test + build| REG
+&#x20;   APP --> DATA\["Persistent SQLite Data"]
 
-&#x20;   REG -->|container image| DOCKER
-
-
-
-&#x20;   VM --> DOCKER
-
-&#x20;   DOCKER --> APP
-
-&#x20;   APP --> DATA
-
-&#x20;   APP --> LOGS
+&#x20;   APP --> LOGS\["Application / System Logs"]
 
 &#x20;   VM --> LOGS
 
-&#x20;   LOGS --> MON
+&#x20;   LOGS --> MON\["Monitoring - planned"]
 
 ```
 
@@ -90,25 +68,13 @@ flowchart TD
 
 flowchart LR
 
-&#x20;   USER\["User / Browser"]
+&#x20;   USER\["User / Browser"] -->|HTTPS eventually| NET\["EduCloud Network - Firewall / Security Rules"]
 
-&#x20;   NET\["EduCloud Network - Firewall / Security Rules"]
+&#x20;   NET --> VM\["Ubuntu VM"]
 
-&#x20;   VM\["Ubuntu VM"]
+&#x20;   VM --> RP\["Reverse Proxy - planned"]
 
-&#x20;   RP\["Reverse Proxy - planned"]
-
-&#x20;   APP\["Application Container"]
-
-
-
-&#x20;   USER -->|HTTPS eventually| NET
-
-&#x20;   NET --> VM
-
-&#x20;   VM --> RP
-
-&#x20;   RP --> APP
+&#x20;   RP --> APP\["Application Container"]
 
 ```
 
