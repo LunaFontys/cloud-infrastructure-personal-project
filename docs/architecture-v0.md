@@ -34,27 +34,49 @@ research, build, and test the infrastructure.
 
 flowchart TD
 
-&#x20;   DEV\["Developer PC"] -->|git push| GIT\["GitHub Repository"]
+&#x20;   DEV
 
-&#x20;   GIT -->|trigger| CI\["GitHub Actions CI Pipeline"]
+&#x20;   GIT
 
-&#x20;   CI -->|test + build| REG\["Container Registry - planned"]
+&#x20;   CI
 
-&#x20;   REG -->|container image| DOCKER\["Docker Engine"]
+&#x20;   REG
+
+&#x20;   VM
+
+&#x20;   DOCKER
+
+&#x20;   APP
+
+&#x20;   DATA
+
+&#x20;   LOGS
+
+&#x20;   MON
 
 
 
-&#x20;   VM\["EduCloud Ubuntu VM"] --> DOCKER
+&#x20;   DEV -->|git push| GIT
 
-&#x20;   DOCKER --> APP\["Node.js / Express Application - Docker Container"]
+&#x20;   GIT -->|trigger| CI
 
-&#x20;   APP --> DATA\["Persistent SQLite Data"]
+&#x20;   CI -->|test + build| REG
 
-&#x20;   APP --> LOGS\["Application / System Logs"]
+&#x20;   REG -->|container image| DOCKER
+
+
+
+&#x20;   VM --> DOCKER
+
+&#x20;   DOCKER --> APP
+
+&#x20;   APP --> DATA
+
+&#x20;   APP --> LOGS
 
 &#x20;   VM --> LOGS
 
-&#x20;   LOGS --> MON\["Monitoring - planned"]
+&#x20;   LOGS --> MON
 
 ```
 
@@ -68,13 +90,25 @@ flowchart TD
 
 flowchart LR
 
-&#x20;   USER\["User / Browser"] -->|HTTPS eventually| NET\["EduCloud Network - Firewall / Security Rules"]
+&#x20;   USER
 
-&#x20;   NET --> VM\["Ubuntu VM"]
+&#x20;   NET
 
-&#x20;   VM --> RP\["Reverse Proxy - planned"]
+&#x20;   VM
 
-&#x20;   RP --> APP\["Application Container"]
+&#x20;   RP
+
+&#x20;   APP
+
+
+
+&#x20;   USER -->|HTTPS eventually| NET
+
+&#x20;   NET --> VM
+
+&#x20;   VM --> RP
+
+&#x20;   RP --> APP
 
 ```
 
