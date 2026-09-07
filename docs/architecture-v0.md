@@ -34,25 +34,25 @@ research, build, and test the infrastructure.
 
 flowchart TD
 
-&#x20;   DEV\[Developer PC]
+&#x20;   DEV
 
-&#x20;   GIT\[GitHub Repository]
+&#x20;   GIT
 
-&#x20;   CI\[GitHub Actions<br/>CI pipeline]
+&#x20;   CI
 
-&#x20;   REG\[Container Registry<br/>planned]
+&#x20;   REG
 
-&#x20;   VM\[EduCloud Ubuntu VM]
+&#x20;   VM
 
-&#x20;   DOCKER\[Docker Engine]
+&#x20;   DOCKER
 
-&#x20;   APP\[Node.js / Express Application<br/>Docker Container]
+&#x20;   APP
 
-&#x20;   DATA\[(Persistent SQLite Data)]
+&#x20;   DATA
 
-&#x20;   LOGS\[Application / System Logs]
+&#x20;   LOGS
 
-&#x20;   MON\[Monitoring<br/>planned]
+&#x20;   MON
 
 
 
