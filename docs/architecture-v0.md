@@ -34,25 +34,25 @@ research, build, and test the infrastructure.
 
 flowchart TD
 
-&#x20;   DEV
+&#x20;   DEV\["Developer PC"]
 
-&#x20;   GIT
+&#x20;   GIT\["GitHub Repository"]
 
-&#x20;   CI
+&#x20;   CI\["GitHub Actions CI Pipeline"]
 
-&#x20;   REG
+&#x20;   REG\["Container Registry - planned"]
 
-&#x20;   VM
+&#x20;   VM\["EduCloud Ubuntu VM"]
 
-&#x20;   DOCKER
+&#x20;   DOCKER\["Docker Engine"]
 
-&#x20;   APP
+&#x20;   APP\["Node.js / Express Application - Docker Container"]
 
-&#x20;   DATA
+&#x20;   DATA\["Persistent SQLite Data"]
 
-&#x20;   LOGS
+&#x20;   LOGS\["Application / System Logs"]
 
-&#x20;   MON
+&#x20;   MON\["Monitoring - planned"]
 
 
 
@@ -90,15 +90,15 @@ flowchart TD
 
 flowchart LR
 
-&#x20;   USER
+&#x20;   USER\["User / Browser"]
 
-&#x20;   NET
+&#x20;   NET\["EduCloud Network - Firewall / Security Rules"]
 
-&#x20;   VM
+&#x20;   VM\["Ubuntu VM"]
 
-&#x20;   RP
+&#x20;   RP\["Reverse Proxy - planned"]
 
-&#x20;   APP
+&#x20;   APP\["Application Container"]
 
 
 
