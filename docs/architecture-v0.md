@@ -78,9 +78,15 @@ flowchart TD
 
 &#x20;   LOGS --> MON
 
+```
+
 
 
 \## Public Access
+
+
+
+```mermaid
 
 flowchart LR
 
@@ -103,6 +109,8 @@ flowchart LR
 &#x20;   VM --> RP
 
 &#x20;   RP --> APP
+
+```
 
 
 
