@@ -34,6 +34,14 @@ CI/CD, networking, security, monitoring, and infrastructure automation.
 
 
 
+I have very little practical knowledge of containerisation.
+
+I understand the general purpose of CI/CD, but I do not yet understand how CI/CD
+
+pipelines are designed or implemented.
+
+
+
 \## Why I Chose This Project
 
 
