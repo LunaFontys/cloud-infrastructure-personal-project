@@ -1,14 +1,14 @@
-\# ADR-002: VM Storage Strategy
+# \# ADR-002: VM Storage Strategy
 
 
 
-\## Date
+### Date
 
 9 September 2026
 
 
 
-\## Problem
+### Problem
 
 
 
@@ -32,11 +32,11 @@ enough usable root storage.
 
 
 
-\## Options Considered
+### Options Considered
 
 
 
-\### Option 1 - Keep the current root disk and use the data disk for everything
+#### Option 1 - Keep the current root disk and use the data disk for everything
 
 
 
@@ -46,7 +46,7 @@ have very little free space for packages, updates, logs, and temporary files.
 
 
 
-\### Option 2 - Use only a larger root disk
+#### Option 2 - Use only a larger root disk
 
 
 
@@ -56,7 +56,7 @@ data would all be stored together.
 
 
 
-\### Option 3 - Enlarge the root disk and keep the separate data disk
+#### Option 3 - Enlarge the root disk and keep the separate data disk
 
 
 
@@ -66,7 +66,7 @@ separate data disk can be used for persistent project data.
 
 
 
-\## Decision
+### Decision
 
 
 
@@ -80,7 +80,7 @@ application data.
 
 
 
-\## Reason
+### Reason
 
 
 
@@ -96,7 +96,7 @@ making the storage layout easier to understand and maintain.
 
 
 
-\## Consequences
+### Consequences
 
 
 
@@ -112,7 +112,7 @@ making the storage layout easier to understand and maintain.
 
 
 
-\## Implementation
+### Implementation
 
 
 
@@ -176,7 +176,7 @@ data disk is unavailable.
 
 
 
-\## Validation
+### Validation
 
 
 
@@ -218,7 +218,7 @@ This validated that the data disk is mounted persistently across VM reboots.
 
 
 
-\## Result
+### Result
 
 
 
@@ -240,7 +240,7 @@ The implemented layout is:
 
 
 
-\## What I Learned
+### What I Learned
 
 
 

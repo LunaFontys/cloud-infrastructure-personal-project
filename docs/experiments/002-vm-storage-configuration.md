@@ -1,8 +1,8 @@
-\# Experiment 002 - VM Storage Configuration
+# Experiment 002 - VM Storage Configuration
 
 
 
-\## Date
+### Date
 
 
 
@@ -10,7 +10,7 @@
 
 
 
-\## Goal
+### Goal
 
 
 
@@ -20,7 +20,7 @@ storage for project data.
 
 
 
-\## Starting Situation
+### Starting Situation
 
 
 
@@ -46,11 +46,11 @@ for future software such as Docker.
 
 
 
-\## Implementation
+### Implementation
 
 
 
-\### Root disk
+#### Root disk
 
 
 
@@ -76,7 +76,7 @@ Result:
 
 
 
-\### Data disk
+#### Data disk
 
 
 
@@ -128,7 +128,7 @@ After rebooting the VM:
 
 
 
-\## Conclusion
+### Conclusion
 
 
 

@@ -1,14 +1,14 @@
-\# Requirements v1
+# Requirements v1
 
 
 
-\## Date
+### Date
 
 7 September 2026
 
 
 
-\## Purpose
+### Purpose
 
 
 
@@ -36,11 +36,11 @@ monitored, and maintained.
 
 
 
-\## Functional Requirements
+### Functional Requirements
 
 
 
-\### FR-01 - View services
+#### FR-01 - View services
 
 
 
@@ -54,7 +54,7 @@ Open the application and verify that stored services are displayed.
 
 
 
-\### FR-02 - Create an incident
+#### FR-02 - Create an incident
 
 
 
@@ -68,7 +68,7 @@ Create an incident and verify that it appears in the application.
 
 
 
-\### FR-03 - Resolve an incident
+#### FR-03 - Resolve an incident
 
 
 
@@ -82,7 +82,7 @@ Resolve an incident and verify that its status changes.
 
 
 
-\### FR-04 - Persist data
+#### FR-04 - Persist data
 
 
 
@@ -96,7 +96,7 @@ Create data, restart the application, and verify that the data still exists.
 
 
 
-\### FR-05 - Health endpoint
+#### FR-05 - Health endpoint
 
 
 
@@ -126,11 +126,11 @@ returns a successful response.
 
 
 
-\## Non-Functional / Infrastructure Requirements
+### Non-Functional / Infrastructure Requirements
 
 
 
-\### NFR-01 - External deployment
+#### NFR-01 - External deployment
 
 
 
@@ -146,7 +146,7 @@ Access the deployed application from another device or network.
 
 
 
-\### NFR-02 - Containerised application
+#### NFR-02 - Containerised application
 
 
 
@@ -162,7 +162,7 @@ without manually installing application dependencies inside the container.
 
 
 
-\### NFR-03 - Automated testing
+#### NFR-03 - Automated testing
 
 
 
@@ -180,7 +180,7 @@ functionality passes or fails.
 
 
 
-\### NFR-04 - Automated delivery
+#### NFR-04 - Automated delivery
 
 
 
@@ -198,7 +198,7 @@ automatically and executes the configured stages.
 
 
 
-\### NFR-05 - Controlled network exposure
+#### NFR-05 - Controlled network exposure
 
 
 
@@ -216,7 +216,7 @@ ports are inaccessible.
 
 
 
-\### NFR-06 - HTTPS
+#### NFR-06 - HTTPS
 
 
 
@@ -234,7 +234,7 @@ a valid TLS configuration.
 
 
 
-\### NFR-07 - Secret management
+#### NFR-07 - Secret management
 
 
 
@@ -252,7 +252,7 @@ through an appropriate configuration mechanism.
 
 
 
-\### NFR-08 - Logging
+#### NFR-08 - Logging
 
 
 
@@ -270,7 +270,7 @@ appears in the logs.
 
 
 
-\### NFR-09 - Monitoring
+#### NFR-09 - Monitoring
 
 
 
@@ -290,7 +290,7 @@ resources and intentionally cause at least one detectable problem.
 
 
 
-\### NFR-10 - Reproducibility
+#### NFR-10 - Reproducibility
 
 
 
@@ -310,7 +310,7 @@ the environment.
 
 
 
-\### NFR-11 - Cost
+#### NFR-11 - Cost
 
 
 
@@ -328,7 +328,7 @@ running the project.
 
 
 
-\## Current Assumptions
+## Current Assumptions
 
 
 

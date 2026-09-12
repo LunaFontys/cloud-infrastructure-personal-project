@@ -1,14 +1,14 @@
-\# ADR-001: Hosting Platform
+# ADR-001: Hosting Platform
 
 
 
-\## Date
+### Date
 
 7 September 2026
 
 
 
-\## Problem
+## Problem
 
 
 
@@ -20,7 +20,7 @@ deployment, monitoring, and automation.
 
 
 
-\## Options Considered
+## Options Considered
 
 
 
@@ -34,7 +34,7 @@ deployment, monitoring, and automation.
 
 
 
-\## Criteria
+## Criteria
 
 
 
@@ -50,7 +50,7 @@ deployment, monitoring, and automation.
 
 
 
-\## Decision
+## Decision
 
 
 
@@ -58,7 +58,7 @@ EduCloud will be used as the primary hosting platform.
 
 
 
-\## Reason
+## Reason
 
 
 
@@ -74,7 +74,7 @@ starting with a heavily managed hosting platform.
 
 
 
-\## Consequences
+## Consequences
 
 
 

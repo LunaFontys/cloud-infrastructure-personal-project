@@ -1,20 +1,20 @@
-\# Project Start
+# Project Start
 
 
 
-\## Date
+### Date
 
 7 September 2026
 
 
 
-\## Project
+### Project
 
 Cloud Application \& Infrastructure
 
 
 
-\## Starting Point
+### Starting Point
 
 
 
@@ -42,7 +42,7 @@ pipelines are designed or implemented.
 
 
 
-\## Why I Chose This Project
+### Why I Chose This Project
 
 
 
@@ -60,7 +60,7 @@ stay relatively simple so that most of the learning can focus on the infrastruct
 
 
 
-\## What I Want to Learn
+### What I Want to Learn
 
 
 
@@ -92,7 +92,7 @@ based on research, experiments, and the needs of the project.
 
 
 
-\## Current Competence Direction
+### Current Competence Direction
 
 
 
@@ -116,7 +116,7 @@ Software at level 2 as a realistic part of my competence profile.
 
 
 
-\## Current Expectations
+### Current Expectations
 
 
 

@@ -1,14 +1,14 @@
-\# Experiment 001 - EduCloud Environment Exploration
+# Experiment 001 - EduCloud Environment Exploration
 
 
 
-\## Date
+### Date
 
 8 September 2026
 
 
 
-\## Goal
+### Goal
 
 
 
@@ -18,7 +18,7 @@ the first virtual machine.
 
 
 
-\## Observations
+### Observations
 
 
 
@@ -66,7 +66,7 @@ configured in this EduCloud environment.
 
 
 
-\## Current Questions
+### Current Questions
 
 
 
@@ -86,7 +86,7 @@ configured in this EduCloud environment.
 
 
 
-\## Next Step
+### Next Step
 
 
 
@@ -94,7 +94,7 @@ Inspect the instance creation process before creating the first VM.
 
 
 
-\## VM Configuration
+### VM Configuration
 
 
 
@@ -214,7 +214,7 @@ on this network.
 
 
 
-\### VM console credentials
+#### VM console credentials
 
 
 
@@ -244,7 +244,7 @@ to recreate it and save the provided credentials securely.
 
 
 
-\## VM Inspection
+### VM Inspection
 
 
 
@@ -280,7 +280,7 @@ This confirmed that the EduCloud network is dual-stack.
 
 
 
-\## Storage
+### Storage
 
 
 
@@ -312,7 +312,7 @@ because the current root filesystem has very little free space.
 
 
 
-\## Result
+### Result
 
 
 
@@ -350,7 +350,7 @@ using SSH.
 
 
 
-\## What I Learned
+### What I Learned
 
 
 
@@ -374,7 +374,7 @@ This experiment helped me understand the relationship between:
 
 
 
-\## Follow-up
+### Follow-up
 
 
 

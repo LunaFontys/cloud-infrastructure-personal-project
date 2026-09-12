@@ -1,14 +1,14 @@
-\# Architecture v0
+# Architecture v0
 
 
 
-\## Date
+### Date
 
 7 September 2026
 
 
 
-\## Purpose
+### Purpose
 
 
 
@@ -26,7 +26,7 @@ research, build, and test the infrastructure.
 
 
 
-\## Architecture Overview
+### Architecture Overview
 
 
 
@@ -34,55 +34,55 @@ research, build, and test the infrastructure.
 
 flowchart TD
 
-&#x20;   DEV
+\&#x20;   DEV
 
-&#x20;   GIT
+\&#x20;   GIT
 
-&#x20;   CI
+\&#x20;   CI
 
-&#x20;   REG
+\&#x20;   REG
 
-&#x20;   VM
+\&#x20;   VM
 
-&#x20;   DOCKER
+\&#x20;   DOCKER
 
-&#x20;   APP
+\&#x20;   APP
 
-&#x20;   DATA
+\&#x20;   DATA
 
-&#x20;   LOGS
+\&#x20;   LOGS
 
-&#x20;   MON
-
-
-
-&#x20;   DEV -->|git push| GIT
-
-&#x20;   GIT -->|trigger| CI
-
-&#x20;   CI -->|test + build| REG
-
-&#x20;   REG -->|container image| DOCKER
+\&#x20;   MON
 
 
 
-&#x20;   VM --> DOCKER
+\&#x20;   DEV -->|git push| GIT
 
-&#x20;   DOCKER --> APP
+\&#x20;   GIT -->|trigger| CI
 
-&#x20;   APP --> DATA
+\&#x20;   CI -->|test + build| REG
 
-&#x20;   APP --> LOGS
+\&#x20;   REG -->|container image| DOCKER
 
-&#x20;   VM --> LOGS
 
-&#x20;   LOGS --> MON
+
+\&#x20;   VM --> DOCKER
+
+\&#x20;   DOCKER --> APP
+
+\&#x20;   APP --> DATA
+
+\&#x20;   APP --> LOGS
+
+\&#x20;   VM --> LOGS
+
+\&#x20;   LOGS --> MON
 
 ```
 
 
 
-\## Public Access
+### Public Access
 
 
 
@@ -90,35 +90,35 @@ flowchart TD
 
 flowchart LR
 
-&#x20;   USER
+\&#x20;   USER
 
-&#x20;   NET
+\&#x20;   NET
 
-&#x20;   VM
+\&#x20;   VM
 
-&#x20;   RP
+\&#x20;   RP
 
-&#x20;   APP
+\&#x20;   APP
 
 
 
-&#x20;   USER -->|HTTPS eventually| NET
+\&#x20;   USER -->|HTTPS eventually| NET
 
-&#x20;   NET --> VM
+\&#x20;   NET --> VM
 
-&#x20;   VM --> RP
+\&#x20;   VM --> RP
 
-&#x20;   RP --> APP
+\&#x20;   RP --> APP
 
 ```
 
 
 
-\## Components
+## Components
 
 
 
-\### Developer environment
+#### Developer environment
 
 
 
@@ -126,7 +126,7 @@ Development takes place locally before changes are committed and pushed to GitHu
 
 
 
-\### GitHub
+#### GitHub
 
 
 
@@ -136,7 +136,7 @@ GitHub Actions is currently intended to provide CI/CD functionality.
 
 
 
-\### EduCloud
+#### EduCloud
 
 
 
@@ -146,7 +146,7 @@ single Ubuntu virtual machine.
 
 
 
-\### Docker
+#### Docker
 
 
 
@@ -158,7 +158,7 @@ deployment environments.
 
 
 
-\### Application
+#### Application
 
 
 
@@ -168,7 +168,7 @@ incident-tracking application.
 
 
 
-\### Persistence
+#### Persistence
 
 
 
@@ -182,7 +182,7 @@ application container so that the data survives container replacement.
 
 
 
-\### Networking
+#### Networking
 
 
 
@@ -198,7 +198,7 @@ been selected.
 
 
 
-\### Logging and monitoring
+#### Logging and monitoring
 
 
 
@@ -210,7 +210,7 @@ The exact monitoring solution has not yet been chosen.
 
 
 
-\## Initial Assumptions
+### Initial Assumptions
 
 
 
@@ -236,7 +236,7 @@ The exact monitoring solution has not yet been chosen.
 
 
 
-\## Requirements Mapping
+### Requirements Mapping
 
 
 

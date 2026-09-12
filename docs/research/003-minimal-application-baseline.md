@@ -1,4 +1,4 @@
-\## Research / decision question:
+### Research / decision question:
 
 
 
@@ -6,7 +6,7 @@ What is the smallest application architecture that gives the infrastructure proj
 
 
 
-\### Why:
+#### Why:
 
 
 
@@ -14,7 +14,7 @@ The infrastructure later needs a real application to deploy and operate. If the 
 
 
 
-\### DOT strategy and method:
+#### DOT strategy and method:
 
 
 
@@ -38,15 +38,15 @@ Lab → System test
 
 
 
-\### Expected result:
+#### Expected result:
 
 
 
 A small local application that is sufficiently realistic for the later infrastructure work while remaining quick to understand and maintain.
 
+#### 
 
-
-\### How it will be documented:
+#### How it will be documented:
 
 research note
 
@@ -64,7 +64,7 @@ later evidence document when this becomes a meaningful completed work unit
 
 
 
-\### Definition of done:
+#### Definition of done:
 
 Application can be started locally with a documented command
 
@@ -86,11 +86,11 @@ Another developer could understand how to run it
 
 
 
-\## SQLite Approach Research
+### SQLite Approach Research
 
 
 
-\### Research question
+#### Research question
 
 
 
@@ -102,7 +102,7 @@ scope of the application?
 
 
 
-\### DOT strategy and method
+#### DOT strategy and method
 
 
 
@@ -120,13 +120,13 @@ I compared Node.js' built-in `node:sqlite` module, `better-sqlite3`, and
 
 `node-sqlite3`.
 
+#### 
 
+#### Findings
 
-\### Findings
+##### 
 
-
-
-\#### node:sqlite
+##### node:sqlite
 
 
 
@@ -152,9 +152,9 @@ fully stable.
 
 https://nodejs.org/download/release/latest-v24.x/docs/api/sqlite.html
 
+##### 
 
-
-\#### better-sqlite3
+##### better-sqlite3
 
 
 
@@ -174,7 +174,7 @@ https://www.npmjs.com/package/better-sqlite3
 
 
 
-\#### node-sqlite3
+##### node-sqlite3
 
 
 
@@ -186,7 +186,7 @@ https://www.npmjs.com/package/sqlite3?activeTab=versions
 
 
 
-\### Decision
+#### Decision
 
 
 
@@ -206,7 +206,7 @@ A compatible Node.js version will need to be used later in the Docker image.
 
 
 
-\### Accepted trade-off
+#### Accepted trade-off
 
 
 
@@ -218,7 +218,7 @@ production system if API stability became an important requirement.
 
 
 
-\## Implementation
+### Implementation
 
 
 
@@ -252,9 +252,9 @@ The application deliberately remains small because its main purpose is to provid
 
 a realistic workload for the infrastructure part of the project.
 
+#### 
 
-
-\### Application structure
+#### Application structure
 
 
 
@@ -300,7 +300,7 @@ port 3000.
 
 
 
-\### Implemented functionality
+#### Implemented functionality
 
 
 
@@ -334,7 +334,7 @@ than storing arbitrary status data.
 
 
 
-\## Validation
+### Validation
 
 
 
@@ -344,7 +344,7 @@ and automated tests.
 
 
 
-\### Manual system test
+#### Manual system test
 
 
 
@@ -396,7 +396,7 @@ The `/health` endpoint was manually checked and returned:
 
 
 
-\### Automated tests
+#### Automated tests
 
 
 
@@ -456,7 +456,7 @@ failures.
 
 
 
-\## Findings
+### Findings
 
 
 
@@ -496,7 +496,7 @@ and keeps the application runtime relatively simple.
 
 
 
-\## Conclusion
+### Conclusion
 
 
 
@@ -530,7 +530,7 @@ experiments.
 
 
 
-\## Consequence for the project
+### Consequence for the project
 
 
 

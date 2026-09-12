@@ -22,9 +22,9 @@
 
 **DOT category(s) and method(s)**: WORKSHOP --> Decomposition, LIBRARY --> Literature study/Best good and bad practices, LAB --> System test
 
-**Result**:
+**Result**: The completed application baseline satisfies the original research question. It is complex enough to provide meaningful infrastructure behaviour: a real HTTP application; persistent state; a health endpoint; frontend-backend communication; API validation; related database entities; automated tests.
 
-**Evidence**:
+**Evidence**: 003-minimal-application-baseline.md
 
 
 
@@ -41,6 +41,4 @@
 **Result**:
 
 **Evidence**:
-
-
 
