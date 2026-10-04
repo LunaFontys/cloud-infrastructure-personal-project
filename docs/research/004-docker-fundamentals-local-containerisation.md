@@ -79,7 +79,7 @@ The application normally listens on port 3000.
 
 
 
-The SQLite database path can be configured using the `DATABASE\\\\\\\_PATH`
+The SQLite database path can be configured using the `DATABASE\\\\\\\\\\\\\\\_PATH`
 
 environment variable. If this variable is not provided, the application uses
 
@@ -267,7 +267,7 @@ does not need every file from the development environment.
 
 
 
-Files such as local `node\\\\\\\_modules`, Git metadata and the local SQLite database
+Files such as local `node\\\\\\\\\\\\\\\_modules`, Git metadata and the local SQLite database
 
 should not be copied into the application image.
 
@@ -616,7 +616,7 @@ Runtime application files will include:
 
 \- `/app/package-lock.json`
 
-\- `/app/node\\\_modules`
+\- `/app/node\\\\\\\_modules`
 
 
 
@@ -634,7 +634,7 @@ The container will use:
 
 
 
-`NODE\\\_ENV=production`
+`NODE\\\\\\\_ENV=production`
 
 
 
@@ -642,7 +642,7 @@ The container will use:
 
 
 
-`DATABASE\\\_PATH=/app/data/app.db`
+`DATABASE\\\\\\\_PATH=/app/data/app.db`
 
 
 
@@ -778,7 +778,7 @@ required by the runtime image, including:
 
 
 
-\- local `node\\\_modules`;
+\- local `node\\\\\\\_modules`;
 
 \- local SQLite databases/data;
 
@@ -849,7 +849,71 @@ technical issues are discovered.
 
 #### Implementation notes
 
-To be completed during implementation.
+A `.dockerignore` was added to exclude files that should not be part of the
+
+runtime image, including local dependencies, SQLite data, Git metadata, tests
+
+and temporary files.
+
+
+
+A Dockerfile was created based on `node:24-bookworm`. The Dockerfile:
+
+
+
+\- uses `/app` as the working directory;
+
+\- installs dependencies with `npm ci --omit=dev`;
+
+\- copies the application source into the image;
+
+\- creates `/app/data` for persistent application data;
+
+\- configures `NODE\_ENV`, `PORT` and `DATABASE\_PATH`;
+
+\- declares port 3000;
+
+\- runs the application as the non-root `node` user;
+
+\- starts the application with `node src/server.js`.
+
+
+
+The image was built with:
+
+
+
+`docker build -t cloud-project-app:local .`
+
+
+
+The resulting image was inspected to verify that the expected user,
+
+environment variables, working directory, startup command and exposed port
+
+were present.
+
+
+
+A named volume was created:
+
+
+
+`docker volume create cloud-project-data`
+
+
+
+The application container was then started with:
+
+
+
+`docker run -d --name cloud-project-app -p 127.0.0.1:3000:3000 -v cloud-project-data:/app/data cloud-project-app:local`
+
+
+
+The container started successfully. The application was reachable through
+
+localhost, and the logs showed that the server was running on port 3000.
 
 
 
@@ -1019,7 +1083,7 @@ The following actions were successfully tested:
 
 ###### Result
 
-Passed. 
+Passed.
 
 The existing application functionality continued to work when the application
 
